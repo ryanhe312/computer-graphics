@@ -13,7 +13,7 @@ ln, = ax.plot(np.linspace(0,2*np.pi,chunk),np.zeros(chunk))
 
 def update(frame):
     y_clip = y[frame:frame+chunk]
-    y_fft = np.abs(np.fft.fft(y_clip))
+    y_fft = librosa.amplitude_to_db(np.abs(np.fft.fft(y_clip)), ref=np.max)
     y_fft = 0.02 * y_fft / np.max(y_fft)
     y_fft = np.roll(y_fft,100*frame//chunk)
     ln.set_ydata(y_fft)
