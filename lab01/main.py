@@ -1,13 +1,10 @@
 import librosa
-
 import numpy as np
 
 import matplotlib.pyplot as plt
 import matplotlib.patches as patches
 import matplotlib.path as path
 import matplotlib.animation as animation
-
-np.random.seed(19680801)
 
 y, sr = librosa.load(librosa.example('brahms'))
 S = np.abs(librosa.stft(y,len(y)//10))
@@ -55,5 +52,5 @@ ax.add_patch(patch)
 ax.set_xlim(left[0], right[-1])
 ax.set_ylim(bottom.min(), top.max())
 
-ani = animation.FuncAnimation(fig, animate, frames)
+ani = animation.FuncAnimation(fig, animate, frames, blit=True)
 plt.show()
