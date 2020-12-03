@@ -26,6 +26,8 @@ python main.py
 
 我们使用的`matplotlib`库是Matplotlib是一个用于在Python中创建静态，动画和交互式可视化的综合库，我们利用`matplotlib`的动画功能，绘制根据音乐音高不断变化的直方图。
 
+![demo](./demo.png)
+
 #### 二、算法原理
 
 1. 波形图与频谱

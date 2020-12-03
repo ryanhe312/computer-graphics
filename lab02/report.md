@@ -28,6 +28,8 @@ python main.py
 
 我们使用的`numpy`和`pillow`包用于加载材质图片并处理为`pyopengl`能处理的矩阵格式。
 
+![demo](./demo.png)
+
 #### 二、算法原理
 
 1. OpenGL 模型
